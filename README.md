@@ -75,13 +75,11 @@ Usage of sshpass_proxy:
 
 * 使用 sshpass_proxy 时，ssh 命令获取到的 remote host key 的指纹是 sshpass_proxy 的指纹，而不是真正的目标主机的主机。因此，如果先 `ssh remoteUser@remoteHost` 手动输入密码连接，再使用 sshpass_proxy 连接，将会出现 `WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!` 错误。因此上文通过 `StrictHostKeyChecking=no` 来禁用 remote host key 检查。
 
-<!-- 
 ## 原理
 
-## 高级用法
+参见博客： [SSH 反向代理](https://www.rectcircle.cn/posts/ssh-reverse-proxy/)。
 
-该项目作为库，可以实现 SSH 的反向代理能力。。。
--->
+正如上文所示，sshpass_proxy 只是是 SSH 反向代理的一个具体应用。该项目可以作为一个 SSH 反向代理库来使用，可以用来实现：SSH 跳板机等场景。
 
 ## 依赖的开源项目
 
