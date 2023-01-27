@@ -152,7 +152,7 @@ func main() {
 	if err != nil {
 		log.Fatal("failed dial target server conn: ", err.Error())
 	}
-	err = sshpass_proxy.SSHPassPorxy(
+	err = sshpass_proxy.SSHPassProxy(
 		clientConn, serverConn,
 		param.ProxyServerHostPrivateKey, param.Addr, param.Password)
 	if err != nil {

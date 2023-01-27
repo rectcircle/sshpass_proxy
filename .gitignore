@@ -36,3 +36,4 @@ go.work
 
 # 自定义
 *.log
+*.pass

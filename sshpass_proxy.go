@@ -7,15 +7,15 @@ import (
 	"github.com/rectcircle/sshpass_proxy/crypto/ssh"
 )
 
-// SSHPassPorxy 功能类似于 sshpass，但是原理完全不同。
+// SSHPassProxy 功能类似于 sshpass，但是原理完全不同。
 //
-// SSHPassPorxy 通过一个 ssh 传输层协议 proxy，实现 openssh 的客户端，可以对使用密码鉴权的 ssh server 实现免密登录。
+// SSHPassProxy 通过一个 ssh 传输层协议 proxy，实现 openssh 的客户端，可以对使用密码鉴权的 ssh server 实现免密登录。
 //
 //                                                           SSHPassProxy
 //  +--------+           +------------------------------------------------------------------------------+          +--------+
 //  | client | ---> (clientConn) ssh transport server <--- Packet Copy ---> ssh transport client (serverConn) ---> | server |
 //  +--------+           +------------------------------------------------------------------------------+          +--------+
-func SSHPassPorxy(
+func SSHPassProxy(
 	clientConn, serverConn net.Conn,
 	proxyServerHostPrivateKey ssh.Signer,
 	serverAddr, serverPassword string,
